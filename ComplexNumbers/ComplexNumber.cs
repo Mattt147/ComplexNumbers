@@ -76,9 +76,9 @@
             string stry = "";
             if (y < 0)
             {
-                stry = "- " + y.ToString() + "i";
+                stry = y.ToString() + "i";
             }
-            else if (y > 0)
+            if (y > 0)
             {
                 stry = "+ " + y.ToString() + "i";
             }
