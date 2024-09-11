@@ -46,6 +46,10 @@
             {
                 stry = "+ " + y.ToString() + "i";
             }
+            else if(x == 0)
+            {
+                return stry;
+            }
             return x.ToString() + " " + stry;
         }
 
