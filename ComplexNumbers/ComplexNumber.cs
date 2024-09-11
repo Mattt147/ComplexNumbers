@@ -46,7 +46,7 @@
             {
                 stry = "+ " + y.ToString() + "i";
             }
-            else if(x == 0)
+            if(x == 0)
             {
                 return stry;
             }
@@ -61,6 +61,15 @@
         public double getY()
         {
             return y;
+        }
+        public override bool Equals(object o)
+        {
+            ComplexNumber num  = (ComplexNumber)o;
+            if (num.getX() == this.x && num.getY() == this.y)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }
