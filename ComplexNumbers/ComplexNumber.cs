@@ -32,10 +32,10 @@
         {
             double newX = (x * number.getX() + y * number.getY()) / (number.getX() * number.getX() + number.getY() * number.getY());
             double newY = (y * number.getX() - x * number.getY()) / (number.getX() * number.getX() + number.getY() * number.getY());
-            return new ComplexNumber(newX, newY);
+            return new ComplexNumber(Math.Round(newX,3), Math.Round(newY,3));
         }
 
-        public string toString()
+        public override string ToString()
         {
             string stry = "";
             if (y < 0)
