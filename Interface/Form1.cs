@@ -62,20 +62,33 @@ namespace Interface
             {
                 case 0:
                     textBox5.Text = z1.Add(z2).ToString();
+                    if(textBox5.Text==string.Empty)
+                        textBox5.Text = "0";
                     break;
                 case 1:
                     textBox5.Text = z1.Dif(z2).ToString();
+                    if (textBox5.Text == string.Empty)
+                        textBox5.Text = "0";
                     break;
                 case 2:
                     textBox5.Text = z1.Mul(z2).ToString();
+                    if (textBox5.Text == string.Empty)
+                        textBox5.Text = "0";
                     break;
                 case 3:
+                    if (textBox3.Text == "0" && textBox4.Text == "0")
+                    {
+                        textBox5.Text = "";
+                        MessageBox.Show("Ошибка: деление на ноль невозможно");
+                        return;
+                    }
                     textBox5.Text = z1.Div(z2).ToString();
+                    if (textBox5.Text == string.Empty)
+                        textBox5.Text = "0";
                     break;
                 default:
                     MessageBox.Show("Вы не выбрали операцию");
                     return;
-
             }
 
 

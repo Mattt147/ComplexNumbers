@@ -75,17 +75,13 @@
         {
             string stry = "";
             if (y < 0)
-            {
                 stry = y.ToString() + "i";
-            }
-            if (y > 0)
-            {
+            if (y > 0 && x!=0)
                 stry = "+ " + y.ToString() + "i";
-            }
-            if(x == 0)
-            {
+            if (y > 0 && x == 0)
+                stry = y.ToString() + "i";
+            if (x == 0)
                 return stry;
-            }
             return x.ToString() + " " + stry;
         }
 
