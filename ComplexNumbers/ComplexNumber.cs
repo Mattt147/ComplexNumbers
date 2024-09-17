@@ -1,4 +1,7 @@
-﻿namespace ComplexNumbers
+﻿using System.Numerics;
+using System.Runtime.CompilerServices;
+
+namespace ComplexNumbers
 {
     /// <summary>
     /// Класс, который представляет комплексное число, состоящее из действительной и мнимой частей.
@@ -9,6 +12,9 @@
     {
         private double x;
         private double y;
+        private double rad;
+        private double fi;
+
 
         /// <summary>
         /// Инициализирует новый экземпляр класса
@@ -19,8 +25,28 @@
         {
             this.x = x;
             this.y = y;
+            rad = Math.Sqrt(x * x + y * y);
+            fi = Math.Asin(y / rad);
         }
 
+        public ComplexNumber(double rad, double fi, string tip)
+        {
+            this.rad = rad;
+            this.fi = fi;
+            x = Math.Round(Math.Cos(fi) * rad, 3);
+            y = Math.Round(Math.Sin(fi) * rad, 3);
+
+
+        }
+
+        public ComplexNumber()
+        {
+            x = 1;
+            y = 1;
+            rad = (Math.Sqrt(x + y));
+            fi = Math.Asin(y / rad);
+        }
+            
         /// <summary>
         /// Складывает текущее комплексное число с указанным комплексным числом
         /// </summary>
@@ -48,9 +74,7 @@
         /// <returns>Комплексное число, представляющее результат умножения</returns>
         public ComplexNumber Mul(ComplexNumber number)
         {
-            double newX = x * number.getX() - y * number.getY();
-            double newY = x * number.getY() + y * number.getX();
-            return new ComplexNumber(newX, newY);
+            return new ComplexNumber(rad * number.getRad(), fi + number.getFi(), "Privet");
         }
 
         /// <summary>
@@ -60,9 +84,7 @@
         /// <returns>Комплексное число, представляющее результат деления</returns>
         public ComplexNumber Div(ComplexNumber number)
         {
-            double newX = (x * number.getX() + y * number.getY()) / (number.getX() * number.getX() + number.getY() * number.getY());
-            double newY = (y * number.getX() - x * number.getY()) / (number.getX() * number.getX() + number.getY() * number.getY());
-            return new ComplexNumber(Math.Round(newX,3), Math.Round(newY,3));
+            return new ComplexNumber(rad / number.getRad(), fi - number.getFi(), "Privet");
         }
 
 
@@ -86,16 +108,24 @@
         }
 
         /// <summary>
-        /// Получает значение действительной части комплексного числа
+        /// Возвращает значение действительной части комплексного числа
         /// </summary>
         /// <returns>Действительная часть комплексного числа</returns>
         public double getX()
         {
             return x;
         }
+        public double getRad()
+        {
+            return rad;
+        }
+        public double getFi()
+        {
+            return fi;
+        }
 
         /// <summary>
-        /// Получает значение мнимой части комплексного числа
+        /// Возвращает значение мнимой части комплексного числа
         /// </summary>
         /// <returns>Мнимая часть комплексного числа</returns>
         public double getY()
@@ -116,6 +146,25 @@
                 return true;
             }
             return false;
+        }
+
+        public static ComplexNumber operator +(ComplexNumber z1, ComplexNumber z2)
+        {
+            return z1.Add(z2);
+        }
+
+        public static ComplexNumber operator -(ComplexNumber z1, ComplexNumber z2)
+        {
+            return z1.Dif(z2);
+        }
+        public static ComplexNumber operator *(ComplexNumber z1, ComplexNumber z2)
+        {
+            return z1.Mul(z2);
+        }
+
+        public static ComplexNumber operator /(ComplexNumber z1, ComplexNumber z2)
+        {
+            return z1.Div(z2);
         }
     }
 }
