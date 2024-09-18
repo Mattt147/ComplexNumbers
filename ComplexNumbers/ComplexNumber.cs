@@ -38,7 +38,7 @@ namespace ComplexNumbers
         /// </summary>
         /// <param name="rad">Модуль (длина) комплексного числа</param>
         /// <param name="fi">Аргумент (угол) комплексного числа в радианах</param>
-        /// <param name="tip">Строка, которая может использоваться для дополнительной информации или функциональности</param>
+        /// <param name="tip">Строка-идентификатор типа комплексного числа</param>
         public ComplexNumber(double rad, double fi, string tip)
         {
             this.rad = rad;
