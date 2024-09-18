@@ -10,9 +10,13 @@ namespace ComplexNumbers
     /// </summary>
     public class ComplexNumber
     {
+        //Действительная часть комплексного числа
         private double x;
+        //Мнимая часть комплексного числа
         private double y;
+        //Модуль (длина) комплексного числа
         private double rad;
+        //Аргумент (угол) комплексного числа в радианах
         private double fi;
 
 
@@ -29,16 +33,23 @@ namespace ComplexNumbers
             fi = Math.Asin(y / rad);
         }
 
+        /// <summary>
+        /// Конструктор для создания комплексного числа в полярной форме
+        /// </summary>
+        /// <param name="rad">Модуль (длина) комплексного числа</param>
+        /// <param name="fi">Аргумент (угол) комплексного числа в радианах</param>
+        /// <param name="tip">Строка, которая может использоваться для дополнительной информации или функциональности</param>
         public ComplexNumber(double rad, double fi, string tip)
         {
             this.rad = rad;
             this.fi = fi;
             x = Math.Round(Math.Cos(fi) * rad, 3);
             y = Math.Round(Math.Sin(fi) * rad, 3);
-
-
         }
 
+        /// <summary>
+        /// Конструктор без параметров, который создает комплексное число с действительной и мнимой частями, равными 1
+        /// </summary>
         public ComplexNumber()
         {
             x = 1;
@@ -87,7 +98,6 @@ namespace ComplexNumbers
             return new ComplexNumber(rad / number.getRad(), fi - number.getFi(), "Privet");
         }
 
-
         /// <summary>
         /// Переопределяет метод ToString для представления комплексного числа в виде строки
         /// </summary>
@@ -102,8 +112,6 @@ namespace ComplexNumbers
                 stry = "+ " + y.ToString() + "i";
             if (y > 0 && x == 0)
                 stry = y.ToString() + "i";
-            if (x == 0)
-                return stry;
             return x.ToString() + " " + stry;
         }
 
@@ -115,10 +123,20 @@ namespace ComplexNumbers
         {
             return x;
         }
+
+        /// <summary>
+        /// Возвращает модуль (длину) текущего комплексного числа
+        /// </summary>
+        /// <returns>Модуль (длина) текущего комплексного числа</returns>
         public double getRad()
         {
             return rad;
         }
+
+        /// <summary>
+        /// Возвращает аргумент (угол) текущего комплексного числа
+        /// </summary>
+        /// <returns>Аргумент (угол) текущего комплексного числа</returns>
         public double getFi()
         {
             return fi;
@@ -148,20 +166,45 @@ namespace ComplexNumbers
             return false;
         }
 
+        /// <summary>
+        /// Реализует оператор сложения для двух комплексных чисел
+        /// </summary>
+        /// <param name="z1">Первое комплексное число для сложения</param>
+        /// <param name="z2">Второе комплексное число для сложения</param>
+        /// <returns>Новое комплексное число, являющееся результатом сложения</returns>
         public static ComplexNumber operator +(ComplexNumber z1, ComplexNumber z2)
         {
             return z1.Add(z2);
         }
 
+        /// <summary>
+        /// Реализует оператор вычитания для двух комплексных чисел
+        /// </summary>
+        /// <param name="z1">Первое комплексное число для вычитания</param>
+        /// <param name="z2">Второе комплексное число для вычитания</param>
+        /// <returns>Новое комплексное число, являющееся результатом вычитания</returns>
         public static ComplexNumber operator -(ComplexNumber z1, ComplexNumber z2)
         {
             return z1.Dif(z2);
         }
+
+        /// <summary>
+        /// Реализует оператор умножения для двух комплексных чисел
+        /// </summary>
+        /// <param name="z1">Первое комплексное число для умножения</param>
+        /// <param name="z2">Второе комплексное число для умножения</param>
+        /// <returns>Новое комплексное число, являющееся результатом умножения</returns>
         public static ComplexNumber operator *(ComplexNumber z1, ComplexNumber z2)
         {
             return z1.Mul(z2);
         }
 
+        /// <summary>
+        ///  Реализует оператор деления для двух комплексных чисел
+        /// </summary>
+        /// <param name="z1">Делимое комплексное число</param>
+        /// <param name="z2">Делитель комплексное число</param>
+        /// <returns>Новое комплексное число, являющееся результатом деления</returns>
         public static ComplexNumber operator /(ComplexNumber z1, ComplexNumber z2)
         {
             return z1.Div(z2);
