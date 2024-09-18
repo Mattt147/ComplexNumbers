@@ -173,10 +173,10 @@
             // 
             // comboBox1
             // 
-            comboBox1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            comboBox1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "+", "-", "*", "/" });
-            comboBox1.Location = new Point(63, 332);
+            comboBox1.Location = new Point(63, 326);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(35, 33);
             comboBox1.TabIndex = 17;
