@@ -1,9 +1,9 @@
 using ComplexNumbers;
 namespace Interface
 {
-    public partial class Dekart : Form
+    public partial class Form1 : Form
     {
-        public Dekart()
+        public Form1()
         {
             InitializeComponent();
         }
@@ -48,7 +48,7 @@ namespace Interface
                 if (textBox1.Text == string.Empty || textBox2.Text == string.Empty || textBox3.Text == string.Empty || textBox4.Text == string.Empty)
                 {
                     MessageBox.Show("Ошибка: заполнены не все поля");
-                    return; 
+                    return;
                 }
                 z1 = new ComplexNumber(double.Parse(textBox1.Text), double.Parse(textBox2.Text));
                 z2 = new ComplexNumber(double.Parse(textBox3.Text), double.Parse(textBox4.Text));
@@ -62,7 +62,7 @@ namespace Interface
             {
                 case 0:
                     textBox5.Text = z1.Add(z2).ToString();
-                    if(textBox5.Text==string.Empty)
+                    if (textBox5.Text == string.Empty)
                         textBox5.Text = "0";
                     break;
                 case 1:
@@ -102,6 +102,12 @@ namespace Interface
             textBox3.Text = string.Empty;
             textBox4.Text = string.Empty;
             textBox5.Text = string.Empty;
+        }
+        FormMain  f;
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
         }
     }
 }

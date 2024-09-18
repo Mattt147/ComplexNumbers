@@ -217,6 +217,7 @@
             button3.TabIndex = 22;
             button3.Text = "Назад";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // label10
             // 

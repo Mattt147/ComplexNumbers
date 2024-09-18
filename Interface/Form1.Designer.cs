@@ -1,6 +1,6 @@
 ﻿namespace Interface
 {
-    partial class Dekart
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -245,6 +245,7 @@
             button3.TabIndex = 23;
             button3.Text = "Назад";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // label11
             // 
@@ -256,7 +257,7 @@
             label11.TabIndex = 28;
             label11.Text = "Введите  комплексные чисела  z= a+bi, где a - действительная часть, а b - мнимая.\r\n";
             // 
-            // Dekart
+            // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -282,7 +283,7 @@
             Controls.Add(label4);
             Controls.Add(textBox1);
             Controls.Add(label2);
-            Name = "Dekart";
+            Name = "Form1";
             Text = "Декартовая форма";
             ResumeLayout(false);
             PerformLayout();

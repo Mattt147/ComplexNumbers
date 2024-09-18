@@ -48,6 +48,7 @@
             Dekart.TabIndex = 0;
             Dekart.Text = "Декартовая ";
             Dekart.UseVisualStyleBackColor = false;
+            Dekart.Click += Dekart_Click;
             // 
             // Polar
             // 
@@ -59,6 +60,7 @@
             Polar.TabIndex = 1;
             Polar.Text = "Полярная";
             Polar.UseVisualStyleBackColor = false;
+            Polar.Click += Polar_Click;
             // 
             // Exp
             // 
@@ -70,6 +72,7 @@
             Exp.TabIndex = 2;
             Exp.Text = "Экспоненциальная ";
             Exp.UseVisualStyleBackColor = false;
+            Exp.Click += Exp_Click;
             // 
             // label2
             // 
