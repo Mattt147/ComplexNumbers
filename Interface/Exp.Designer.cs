@@ -41,8 +41,8 @@
             label7 = new Label();
             label8 = new Label();
             button2 = new Button();
-            comboBox1 = new ComboBox();
             textBox5 = new TextBox();
+            comboBox1 = new ComboBox();
             button1 = new Button();
             SuspendLayout();
             // 
@@ -156,7 +156,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Modern No. 20", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(104, 326);
+            label8.Location = new Point(133, 326);
             label8.Name = "label8";
             label8.Size = new Size(51, 29);
             label8.TabIndex = 14;
@@ -164,40 +164,42 @@
             // 
             // button2
             // 
-            button2.Location = new Point(151, 327);
+            button2.Location = new Point(190, 329);
             button2.Name = "button2";
             button2.Size = new Size(72, 34);
             button2.TabIndex = 16;
             button2.Text = "=";
             button2.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Microsoft Sans Serif", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 204);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "+", "-", "*", "/" });
-            comboBox1.Location = new Point(63, 326);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(35, 33);
-            comboBox1.TabIndex = 17;
-            // 
             // textBox5
             // 
             textBox5.Font = new Font("Modern No. 20", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox5.Location = new Point(229, 329);
+            textBox5.Location = new Point(295, 329);
             textBox5.Multiline = true;
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(493, 32);
             textBox5.TabIndex = 18;
             // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.Font = new Font("Modern No. 20", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "+", "-", "*", "/" });
+            comboBox1.Location = new Point(67, 325);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(60, 37);
+            comboBox1.TabIndex = 20;
+            // 
             // button1
             // 
-            button1.Font = new Font("Modern No. 20", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(220, 395);
+            button1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            button1.Location = new Point(311, 396);
+            button1.Margin = new Padding(3, 2, 3, 2);
             button1.Name = "button1";
-            button1.Size = new Size(143, 43);
-            button1.TabIndex = 19;
-            button1.Text = "очистить";
+            button1.Size = new Size(158, 43);
+            button1.TabIndex = 21;
+            button1.Text = "Очистить";
             button1.UseVisualStyleBackColor = true;
             // 
             // Exp
@@ -206,8 +208,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
-            Controls.Add(textBox5);
             Controls.Add(comboBox1);
+            Controls.Add(textBox5);
             Controls.Add(button2);
             Controls.Add(label8);
             Controls.Add(label7);
@@ -242,8 +244,8 @@
         private Label label7;
         private Label label8;
         private Button button2;
-        private ComboBox comboBox1;
         private TextBox textBox5;
+        private ComboBox comboBox1;
         private Button button1;
     }
 }

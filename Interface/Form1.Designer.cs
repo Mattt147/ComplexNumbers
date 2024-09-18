@@ -45,6 +45,7 @@
             textBox5 = new TextBox();
             button2 = new Button();
             label1 = new Label();
+            label10 = new Label();
             SuspendLayout();
             // 
             // label2
@@ -220,12 +221,24 @@
             label1.TabIndex = 20;
             label1.Text = "Результат";
             // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Modern No. 20", 35.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label10.ForeColor = Color.DarkSlateGray;
+            label10.Location = new Point(12, 20);
+            label10.Name = "label10";
+            label10.Size = new Size(429, 50);
+            label10.TabIndex = 21;
+            label10.Text = "Декартовая форма";
+            // 
             // Dekart
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Bisque;
             ClientSize = new Size(790, 439);
+            Controls.Add(label10);
             Controls.Add(label1);
             Controls.Add(button2);
             Controls.Add(textBox5);
@@ -267,5 +280,6 @@
         private TextBox textBox5;
         private Button button2;
         private Label label1;
+        private Label label10;
     }
 }
