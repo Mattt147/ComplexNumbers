@@ -46,13 +46,15 @@
             button2 = new Button();
             label1 = new Label();
             label10 = new Label();
+            button3 = new Button();
+            label11 = new Label();
             SuspendLayout();
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Modern No. 20", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.Location = new Point(53, 180);
+            label2.Location = new Point(53, 150);
             label2.Name = "label2";
             label2.Size = new Size(60, 29);
             label2.TabIndex = 1;
@@ -62,7 +64,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Modern No. 20", 21.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(130, 178);
+            textBox1.Location = new Point(130, 145);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(196, 31);
@@ -73,7 +75,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Modern No. 20", 21.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(347, 181);
+            label4.Location = new Point(347, 145);
             label4.Name = "label4";
             label4.Size = new Size(28, 31);
             label4.TabIndex = 4;
@@ -82,7 +84,7 @@
             // textBox2
             // 
             textBox2.Font = new Font("Modern No. 20", 21.7499981F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(390, 181);
+            textBox2.Location = new Point(390, 150);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(196, 31);
@@ -92,7 +94,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Modern No. 20", 21.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(592, 175);
+            label5.Location = new Point(592, 150);
             label5.Name = "label5";
             label5.Size = new Size(24, 31);
             label5.TabIndex = 6;
@@ -103,7 +105,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Modern No. 20", 20.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label3.Location = new Point(53, 247);
+            label3.Location = new Point(53, 228);
             label3.Name = "label3";
             label3.Size = new Size(60, 29);
             label3.TabIndex = 7;
@@ -112,7 +114,7 @@
             // textBox3
             // 
             textBox3.Font = new Font("Modern No. 20", 21.7499981F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(130, 245);
+            textBox3.Location = new Point(130, 228);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(196, 31);
@@ -121,7 +123,7 @@
             // textBox4
             // 
             textBox4.Font = new Font("Modern No. 20", 21.7499981F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(390, 245);
+            textBox4.Location = new Point(390, 228);
             textBox4.Multiline = true;
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(196, 31);
@@ -131,7 +133,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Modern No. 20", 21.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(347, 247);
+            label6.Location = new Point(347, 226);
             label6.Name = "label6";
             label6.Size = new Size(28, 31);
             label6.TabIndex = 10;
@@ -141,7 +143,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Modern No. 20", 21.7499981F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(592, 247);
+            label7.Location = new Point(592, 231);
             label7.Name = "label7";
             label7.Size = new Size(24, 31);
             label7.TabIndex = 11;
@@ -226,18 +228,42 @@
             label10.AutoSize = true;
             label10.Font = new Font("Modern No. 20", 35.9999962F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.DarkSlateGray;
-            label10.Location = new Point(12, 20);
+            label10.Location = new Point(12, 9);
             label10.Name = "label10";
             label10.Size = new Size(429, 50);
             label10.TabIndex = 21;
             label10.Text = "Декартовая форма";
             // 
+            // button3
+            // 
+            button3.BackColor = Color.Coral;
+            button3.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 204);
+            button3.Location = new Point(610, 385);
+            button3.Margin = new Padding(3, 2, 3, 2);
+            button3.Name = "button3";
+            button3.Size = new Size(158, 43);
+            button3.TabIndex = 23;
+            button3.Text = "Назад";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.Location = new Point(12, 88);
+            label11.Name = "label11";
+            label11.Size = new Size(646, 21);
+            label11.TabIndex = 28;
+            label11.Text = "Введите  комплексные чисела  z= a+bi, где a - действительная часть, а b - мнимая.\r\n";
+            // 
             // Dekart
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Bisque;
+            BackColor = Color.PeachPuff;
             ClientSize = new Size(790, 439);
+            Controls.Add(label11);
+            Controls.Add(button3);
             Controls.Add(label10);
             Controls.Add(label1);
             Controls.Add(button2);
@@ -281,5 +307,7 @@
         private Button button2;
         private Label label1;
         private Label label10;
+        private Button button3;
+        private Label label11;
     }
 }
