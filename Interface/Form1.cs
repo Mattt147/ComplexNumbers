@@ -1,9 +1,9 @@
 using ComplexNumbers;
 namespace Interface
 {
-    public partial class Form1 : Form
+    public partial class Dekart : Form
     {
-        public Form1()
+        public Dekart()
         {
             InitializeComponent();
         }
