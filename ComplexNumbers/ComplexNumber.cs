@@ -38,13 +38,13 @@ namespace ComplexNumbers
         /// </summary>
         /// <param name="rad">Модуль (длина) комплексного числа</param>
         /// <param name="fi">Аргумент (угол) комплексного числа в радианах</param>
-        /// <param name="tip">Строка, которая может использоваться для дополнительной информации или функциональности</param>
+        /// <param name="tip">Строка-идентификатор типа комплексного числа</param>
         public ComplexNumber(double rad, double fi, string tip)
         {
             this.rad = rad;
             this.fi = fi;
-            x = Math.Round(Math.Cos(fi) * rad, 3);
-            y = Math.Round(Math.Sin(fi) * rad, 3);
+            x = Math.Cos(fi) * rad;
+            y = Math.Sin(fi) * rad;
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace ComplexNumbers
         {
             x = 1;
             y = 1;
-            rad = (Math.Sqrt(x + y));
+            rad = Math.Sqrt(x + y);
             fi = Math.Asin(y / rad);
         }
             
@@ -105,6 +105,8 @@ namespace ComplexNumbers
         /// где x - действительная часть, y - мнимая часть.</returns>
         public override string ToString()
         {
+            x = Math.Round(x, 3);
+            y = Math.Round(y, 3);
             string stry = "";
             if (y < 0)
                 stry = y.ToString() + "i";
@@ -113,6 +115,36 @@ namespace ComplexNumbers
             if (y > 0 && x == 0)
                 stry = y.ToString() + "i";
             return x.ToString() + " " + stry;
+        }
+
+        /// <summary>
+        /// Возвращает строковое представление комплексного числа в тригонометрической форме
+        /// </summary>
+        /// <returns>Строка в формате "r * (cos(phi) + i * sin(phi))", где:
+        /// rad - модуль комплексного числа, округленный до 3 знаков после запятой
+        /// fi - аргумент комплексного числа в радианах, округленный до 3 знаков после запятой</returns>
+        public string ToStringPo()
+        {
+            rad = Math.Round(rad, 3);
+            fi = Math.Round(fi, 3);
+            if (rad == 0)
+                return "";
+            return $"{rad} * (cos({fi}) + i * sin({fi}))";
+        }
+
+        /// <summary>
+        /// Возвращает строковое представление комплексного числа в экспоненциальной форме
+        /// </summary>
+        /// <returns>Строка в формате "r * e^(phi * i)", где:
+        /// rad - модуль комплексного числа, округленный до 3 знаков после запятой
+        /// fi - аргумент комплексного числа в радианах, округленный до 3 знаков после запятой</returns>
+        public string ToStringExp()
+        {
+            rad = Math.Round(rad, 3);
+            fi = Math.Round(fi, 3);
+            if (rad == 0)
+                return "";
+            return $"{rad} * e ^ ({fi} * i)";
         }
 
         /// <summary>
@@ -158,6 +190,8 @@ namespace ComplexNumbers
         /// <returns>true, если текущее комплексное число равно указанному объекту, иначе false</returns>
         public override bool Equals(object o)
         {
+            x = Math.Round(x, 3);
+            y = Math.Round(y, 3);
             ComplexNumber num  = (ComplexNumber)o;
             if (num.getX() == this.x && num.getY() == this.y)
             {

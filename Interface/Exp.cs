@@ -49,28 +49,28 @@ namespace Interface
             switch (comboBox1.SelectedIndex)
             {
                 case 0:
-                    textBox5.Text = z1.Add(z2).ToString();
+                    textBox5.Text = z1.Add(z2).ToStringExp();
                     if (textBox5.Text == string.Empty)
                         textBox5.Text = "0";
                     break;
                 case 1:
-                    textBox5.Text = z1.Dif(z2).ToString();
+                    textBox5.Text = z1.Dif(z2).ToStringExp();
                     if (textBox5.Text == string.Empty)
                         textBox5.Text = "0";
                     break;
                 case 2:
-                    textBox5.Text = z1.Mul(z2).ToString();
+                    textBox5.Text = z1.Mul(z2).ToStringExp();
                     if (textBox5.Text == string.Empty)
                         textBox5.Text = "0";
                     break;
                 case 3:
-                    if (textBox2.Text == "0" && textBox4.Text == "0")
+                    if (textBox2.Text == "0")
                     {
                         textBox5.Text = "";
                         MessageBox.Show("Ошибка: деление на ноль невозможно");
                         return;
                     }
-                    textBox5.Text = z1.Div(z2).ToString();
+                    textBox5.Text = z1.Div(z2).ToStringExp();
                     if (textBox5.Text == string.Empty)
                         textBox5.Text = "0";
                     break;
