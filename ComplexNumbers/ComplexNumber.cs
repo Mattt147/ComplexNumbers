@@ -43,8 +43,8 @@ namespace ComplexNumbers
         {
             this.rad = rad;
             this.fi = fi;
-            x = Math.Cos(fi) * rad;
-            y = Math.Sin(fi) * rad;
+            x = Math.Round(Math.Cos(fi) * rad, 3);
+            y = Math.Round(Math.Sin(fi) * rad, 3);
         }
 
         /// <summary>
@@ -190,8 +190,6 @@ namespace ComplexNumbers
         /// <returns>true, если текущее комплексное число равно указанному объекту, иначе false</returns>
         public override bool Equals(object o)
         {
-            x = Math.Round(x, 3);
-            y = Math.Round(y, 3);
             ComplexNumber num  = (ComplexNumber)o;
             if (num.getX() == this.x && num.getY() == this.y)
             {
