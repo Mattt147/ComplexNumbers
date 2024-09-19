@@ -12,9 +12,10 @@ namespace Interface
 {
     public partial class ErrorForm : Form
     {
-        public ErrorForm()
+        public ErrorForm(string msg)
         {
             InitializeComponent();
+            label2.Text = msg;
         }
     }
 }
