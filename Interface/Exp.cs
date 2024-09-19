@@ -22,7 +22,7 @@ namespace Interface
         {
             this.Close();
         }
-
+        //Error err;
         private void button2_Click(object sender, EventArgs e)
         {
             ComplexNumber z1;
@@ -32,8 +32,11 @@ namespace Interface
             {
                 if (textBox1.Text == string.Empty || textBox2.Text == string.Empty || textBox3.Text == string.Empty || textBox4.Text == string.Empty)
                 {
-                    MessageBox.Show("Ошибка: заполнены не все поля");
-                    return;
+                    //err = new Error();
+                    //err.label1.Text = "Ошибка: заполнены не все поля";
+                    //err.Show();
+                    //MessageBox.Show("Ошибка: заполнены не все поля");
+                    //return;
                 }
                 z1 = new ComplexNumber(double.Parse(textBox1.Text), double.Parse(textBox3.Text), p);
                 z2 = new ComplexNumber(double.Parse(textBox2.Text), double.Parse(textBox4.Text), p);
