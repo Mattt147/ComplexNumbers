@@ -154,11 +154,12 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Modern No. 20", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(24, 459);
+            label7.Location = new Point(24, 463);
             label7.Name = "label7";
             label7.Size = new Size(60, 35);
             label7.TabIndex = 13;
             label7.Text = "Z1 ";
+            label7.Click += label7_Click;
             // 
             // label8
             // 
@@ -197,7 +198,7 @@
             comboBox1.Font = new Font("Modern No. 20", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             comboBox1.FormattingEnabled = true;
             comboBox1.Items.AddRange(new object[] { "+", "-", "*", "/" });
-            comboBox1.Location = new Point(77, 455);
+            comboBox1.Location = new Point(78, 460);
             comboBox1.Margin = new Padding(3, 4, 3, 4);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(68, 43);
@@ -254,9 +255,9 @@
             label11.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label11.Location = new Point(24, 136);
             label11.Name = "label11";
-            label11.Size = new Size(502, 28);
+            label11.Size = new Size(618, 28);
             label11.TabIndex = 26;
-            label11.Text = "Введите радиус(r) и угол (fi) для двух чисел z1 и z2";
+            label11.Text = "Введите радиус(r) и угол (fi) в радианах для двух чисел z1 и z2";
             // 
             // Exp
             // 

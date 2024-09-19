@@ -246,9 +246,9 @@
             label11.Font = new Font("Segoe UI Symbol", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label11.Location = new Point(14, 116);
             label11.Name = "label11";
-            label11.Size = new Size(502, 28);
+            label11.Size = new Size(618, 28);
             label11.TabIndex = 27;
-            label11.Text = "Введите радиус(r) и угол (fi) для двух чисел z1 и z2";
+            label11.Text = "Введите радиус(r) и угол (fi) в радианах для двух чисел z1 и z2";
             // 
             // label9
             // 

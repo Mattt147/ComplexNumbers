@@ -88,5 +88,10 @@ namespace Interface
             textBox4.Text = string.Empty;
             textBox5.Text = string.Empty;
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
