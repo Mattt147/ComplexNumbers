@@ -22,9 +22,10 @@ namespace Interface
         {
             this.Close();
         }
-        //Error err;
+
         private void button2_Click(object sender, EventArgs e)
         {
+            ErrorForm ef;
             ComplexNumber z1;
             ComplexNumber z2;
             string p = "";
@@ -32,18 +33,17 @@ namespace Interface
             {
                 if (textBox1.Text == string.Empty || textBox2.Text == string.Empty || textBox3.Text == string.Empty || textBox4.Text == string.Empty)
                 {
-                    //err = new Error();
-                    //err.label1.Text = "Ошибка: заполнены не все поля";
-                    //err.Show();
-                    //MessageBox.Show("Ошибка: заполнены не все поля");
-                    //return;
+                    ef = new ErrorForm("Заполнены не все поля");
+                    ef.ShowDialog();
+                    return;
                 }
                 z1 = new ComplexNumber(double.Parse(textBox1.Text), double.Parse(textBox3.Text), p);
                 z2 = new ComplexNumber(double.Parse(textBox2.Text), double.Parse(textBox4.Text), p);
             }
             catch
             {
-                MessageBox.Show("Ошибка: не каждое заполненное поле является числом");
+                ef = new ErrorForm("Не каждое заполненное поле является числом");
+                ef.ShowDialog();
                 return;
             }
             switch (comboBox1.SelectedIndex)
@@ -67,7 +67,8 @@ namespace Interface
                     if (textBox2.Text == "0")
                     {
                         textBox5.Text = "";
-                        MessageBox.Show("Ошибка: деление на ноль невозможно");
+                        ef = new ErrorForm("Деление на ноль невозможно");
+                        ef.ShowDialog();
                         return;
                     }
                     textBox5.Text = z1.Div(z2).ToStringExp();
@@ -75,7 +76,8 @@ namespace Interface
                         textBox5.Text = "0";
                     break;
                 default:
-                    MessageBox.Show("Вы не выбрали операцию");
+                    ef = new ErrorForm("Вы не выбрали операцию");
+                    ef.ShowDialog();
                     return;
             }
         }
